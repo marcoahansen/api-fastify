@@ -1,12 +1,15 @@
-FROM node:16
+FROM node:18
 
-WORKDIR /usr/src/app
+WORKDIR /src
 
 COPY package*.json ./
+
 RUN npm install
 
 COPY . .
 
+# Expose the port the app runs on
 EXPOSE 3000
 
-CMD ["node", "start"]
+# Command to run the application
+CMD ["yarn", "start"]

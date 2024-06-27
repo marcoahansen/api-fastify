@@ -1,7 +1,7 @@
-const { productsRoutes } = require('./products');
 const { categoriesRoutes } = require('./categories');
+const { healthRoutes } = require('./health');
 
 module.exports = fastify => {
-  productsRoutes(fastify);
   categoriesRoutes(fastify);
+  healthRoutes(fastify);
 }
